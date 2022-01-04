@@ -20,6 +20,7 @@ html {
 
 body {
   background-color: var(--color-black);
+  color: var(--color-white);
 }
 
 a {
@@ -62,4 +63,47 @@ a {
   display: block;
   width: 50px;
   height: 50px;
+}
+
+.header-right {
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  line-height: 50px;
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-list {
+  font-weight: 400;
+  list-style-type: none;
+  width: 500px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.nav-link {
+  transition: 0.5s;
+}
+
+.nav-link:hover {
+  color: var(--color-gold);
+}
+
+.switch-lng {
+  font-weight: 700;
+  width: 70px;
+  text-align: justify;
+}
+
+.selected {
+  color: var(--color-gold);
+}
+
+.unselected {
+  transition: 0.5s;
+}
+
+.unselected:hover {
+  color: var(--color-gold);
 }
