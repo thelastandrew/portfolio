@@ -93,7 +93,9 @@ a {
 .switch-lng {
   font-weight: 700;
   width: 70px;
-  text-align: justify;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .selected {
