@@ -160,8 +160,15 @@ a {
   color: var(--color-black);
 }
 
-.btn-gld:hover {
+.btn-gld:hover,
+.btn-black:hover {
   color: var(--color-white);
+}
+
+.btn-black {
+  border: 2px solid var(--color-gold);
+  background-color: var(--color-black);
+  color: var(--color-gold);
 }
 
 .section-title {
@@ -220,4 +227,10 @@ a {
   font-weight: 400;
   line-height: 36px;
   padding-bottom: 10px;
+}
+
+.portfolio-btns {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
 }
