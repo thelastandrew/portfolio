@@ -54,7 +54,8 @@ a {
   transition: 0.3s;
 }
 
-.logo:hover {
+.logo:hover,
+.play-btn:hover {
   filter: invert(19%) sepia(5%) saturate(1754%) hue-rotate(7deg) brightness(87%)
     contrast(88%);
 }
@@ -251,4 +252,23 @@ a {
 
 .portfolio-item:hover {
   box-shadow: 0 0 20px var(--color-gold);
+}
+
+.video-player {
+  max-width: 1400px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.play-btn {
+  position: absolute;
+  cursor: pointer;
+  width: 130px;
+  height: 130px;
+  background-image: url(./assets/svg/Play_hover.svg);
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  transition: 0.3s;
 }
