@@ -233,4 +233,22 @@ a {
   display: flex;
   gap: 5px;
   justify-content: center;
+  margin-bottom: 60px;
+}
+
+.portfolio-items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.portfolio-item {
+  max-width: 450px;
+  max-height: 560px;
+  cursor: pointer;
+}
+
+.portfolio-item:hover {
+  box-shadow: 0 0 20px var(--color-gold);
 }
