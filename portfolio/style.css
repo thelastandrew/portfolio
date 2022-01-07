@@ -174,7 +174,7 @@ a {
 
 .section-title {
   width: 50%;
-  margin: 100px auto 60px;
+  margin: 0 auto 60px;
   font-family: "Merriweather", serif;
   color: var(--color-gold);
   background-image: linear-gradient(
@@ -196,6 +196,21 @@ a {
   margin-left: 50%;
   transform: translateX(-50%);
   background-color: var(--color-black);
+}
+
+.skills,
+.portfolio,
+.video,
+.price {
+  padding-top: 100px;
+}
+
+.skills {
+  padding-bottom: 10px;
+}
+
+.price {
+  padding-bottom: 100px;
 }
 
 .skills-items,
@@ -229,7 +244,6 @@ a {
   font-size: 18px;
   font-weight: 400;
   line-height: 36px;
-  padding-bottom: 10px;
 }
 
 .portfolio-btns {
@@ -302,5 +316,5 @@ a {
 
 .price-description {
   font-family: "Inter", sans-serif;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
