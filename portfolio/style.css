@@ -318,3 +318,57 @@ a {
   font-family: "Inter", sans-serif;
   margin-bottom: 40px;
 }
+
+.contacts {
+  margin-left: -20px;
+  margin-right: -20px;
+  padding-top: 60px;
+  height: 700px;
+  background: url(./assets/jpg/contacts-bg.jpg);
+  background-size: auto 700px;
+  background-position: center center;
+}
+
+.contacts-container {
+  width: 450px;
+  margin-left: 970px;
+}
+
+.contacts-title {
+  color: var(--color-gold);
+  font-family: "Merriweather", serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 80px;
+  margin-bottom: 40px;
+}
+
+input,
+textarea {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  border: 2px solid var(--color-gold);
+  color: var(--color-white);
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 40px;
+  padding-top: 3px;
+  padding-left: 18px;
+  padding-bottom: 3px;
+  margin-bottom: 20px;
+}
+
+textarea {
+  height: 100px;
+  resize: none;
+  margin-bottom: 27px;
+}
+
+/* ::placeholder {
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 40px;
+  margin: 5px auto 20px;
+} */
