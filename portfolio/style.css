@@ -55,7 +55,8 @@ a {
 }
 
 .logo:hover,
-.play-btn:hover {
+.play-btn:hover,
+.social p:hover {
   filter: invert(19%) sepia(5%) saturate(1754%) hue-rotate(7deg) brightness(87%)
     contrast(88%);
 }
@@ -348,7 +349,7 @@ textarea {
   width: 100%;
   background: rgba(0, 0, 0, 0.5);
   border: 2px solid var(--color-gold);
-  color: var(--color-white);
+  color: var(--color-gold);
   font-family: "Inter", sans-serif;
   font-size: 20px;
   font-weight: 400;
@@ -365,10 +366,70 @@ textarea {
   margin-bottom: 27px;
 }
 
-/* ::placeholder {
-  font-family: inherit;
+::placeholder {
+  color: var(--color-gld);
+}
+
+.footer .container {
+  height: 150px;
+  font-family: "Inter", sans-serif;
   font-size: 20px;
   font-weight: 400;
-  line-height: 40px;
-  margin: 5px auto 20px;
-} */
+  line-height: 50px;
+  color: var(--color-white);
+}
+
+.footer a {
+  transition: 0.3s;
+}
+
+.social p {
+  width: 32px;
+  height: 32px;
+  text-align: center;
+}
+
+.social-insta {
+  background: url("./assets/svg/insta.svg");
+}
+
+.social-fb {
+  background: url("./assets/svg/facebook.svg");
+}
+
+.social-twitter {
+  background: url("./assets/svg/twitter.svg");
+}
+
+.social-pin {
+  background: url("./assets/svg/pinterest.svg");
+}
+
+.rolling-scopes {
+  margin-left: 20px;
+}
+
+.footer .container,
+.copyright-year-github,
+.rolling-scopes,
+.social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright-year-github,
+.social {
+  gap: 20px;
+}
+
+.social a {
+  display: block;
+  width: 32px;
+  height: 32px;
+}
+
+.footer-github a:hover,
+.rolling-scopes a:hover {
+  color: var(--color-gold);
+}
