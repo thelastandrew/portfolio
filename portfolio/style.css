@@ -56,7 +56,7 @@ a {
 
 .logo:hover,
 .play-btn:hover,
-.social p:hover {
+.social li:hover {
   filter: invert(19%) sepia(5%) saturate(1754%) hue-rotate(7deg) brightness(87%)
     contrast(88%);
 }
@@ -379,7 +379,8 @@ textarea {
   color: var(--color-white);
 }
 
-.footer a {
+.footer a,
+.footer li {
   transition: 0.3s;
 }
 
@@ -412,15 +413,19 @@ textarea {
 .footer .container,
 .copyright-year-github,
 .rolling-scopes,
-.social {
+.social-list {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .copyright-year-github,
-.social {
+.social-list {
   gap: 20px;
+}
+
+.social-list {
+  list-style-type: none;
 }
 
 .social a {
