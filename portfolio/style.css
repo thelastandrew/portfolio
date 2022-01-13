@@ -3,6 +3,7 @@
 /* font-family: 'Merriweather', serif; */
 
 :root {
+  /* colors */
   --color-black: #000;
   --color-gold: #bdae82;
   --color-white: #fff;
@@ -16,6 +17,7 @@
 
 html {
   scroll-behavior: smooth;
+  font-size: 16px;
 }
 
 body {
@@ -29,15 +31,16 @@ a {
 }
 
 .container {
-  width: 1440px; /* на следующих этапах заменить на max-width */
+  max-width: 90rem;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 1.25rem;
 }
 
 .header-container {
   background-image: url("./assets/jpg/bg.jpg");
   background-repeat: no-repeat;
   background-position: center 0;
+  background-size: 100%;
   height: 90px;
   display: flex;
   flex-direction: row;
@@ -116,6 +119,7 @@ a {
   background: url("./assets/jpg/bg.jpg");
   background-repeat: no-repeat;
   background-position: center -90px;
+  background-size: contain;
 }
 
 .hero {
@@ -332,7 +336,8 @@ a {
 
 .contacts-container {
   width: 450px;
-  margin-left: 970px;
+  margin-left: auto;
+  margin-right: 1.25rem;
 }
 
 .contacts-title {
