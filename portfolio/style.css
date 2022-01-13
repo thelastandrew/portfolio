@@ -276,11 +276,15 @@ a {
 }
 
 .video-player {
-  max-width: 1400px;
+  max-width: 87.5rem;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#video {
+  max-width: 100%;
 }
 
 .play-btn {
