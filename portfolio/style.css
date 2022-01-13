@@ -25,15 +25,19 @@ body {
   color: var(--color-white);
 }
 
+ul {
+  list-style-type: none;
+}
+
 a {
   text-decoration: none;
   color: var(--color-white);
 }
 
 .container {
-  max-width: 90rem;
+  max-width: 90rem; /*1440px*/
   margin: 0 auto;
-  padding: 0 1.25rem;
+  padding: 0 1.25rem; /*20px*/
 }
 
 .header-container {
@@ -41,7 +45,7 @@ a {
   background-repeat: no-repeat;
   background-position: center 0;
   background-size: 100%;
-  height: 90px;
+  height: 5.625rem; /*90px*/
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -49,8 +53,8 @@ a {
 }
 
 .logo {
-  width: 50px;
-  height: 50px;
+  width: 3.125rem; /*50px*/
+  height: 3.125rem; /*50px*/
   background-image: url("./assets/svg/logo.svg");
   background-size: contain;
   background-repeat: no-repeat;
@@ -66,22 +70,22 @@ a {
 
 .home-link {
   display: block;
-  width: 50px;
-  height: 50px;
+  width: 3.125rem; /*50px*/
+  height: 3.125rem; /*50px*/
 }
 
 .header-right {
   font-family: "Inter", sans-serif;
-  font-size: 20px;
-  line-height: 50px;
+  font-size: 1.25rem; /*20px*/
+  line-height: 2.5em; /*50px*/
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 .nav-list {
   font-weight: 400;
-  list-style-type: none;
-  width: 500px;
+  width: 31.25rem; /*500px*/
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -97,7 +101,7 @@ a {
 
 .switch-lng {
   font-weight: 700;
-  width: 70px;
+  width: 4.375rem; /*70px*/
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -113,6 +117,42 @@ a {
 
 .unselected:hover {
   color: var(--color-gold);
+}
+
+.burger {
+  display: none;
+}
+
+.burger-line {
+  width: 100%;
+  height: 3px;
+  background: var(--color-white);
+}
+
+/* медиа запрос для блока header */
+@media (max-width: 768px) {
+  .header-container {
+    padding: 0 3.75rem; /*60px*/
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .switch-lng {
+    width: 5.125rem;
+  }
+
+  .burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 3.125rem;
+    height: 1.75rem;
+    cursor: pointer;
+    margin-right: 0.25rem;
+    margin-left: 1.25rem;
+  }
 }
 
 .hero-container {
@@ -431,10 +471,6 @@ textarea {
 .copyright-year-github,
 .social-list {
   gap: 20px;
-}
-
-.social-list {
-  list-style-type: none;
 }
 
 .social a {
