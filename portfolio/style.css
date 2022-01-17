@@ -43,6 +43,8 @@ ol {
   padding: 0 20px;
 }
 
+/* HEADER */
+
 .header > .container,
 .header-right,
 .nav-list,
@@ -110,6 +112,8 @@ ol {
   color: var(--color-gold);
 }
 
+/* BURGER MENU */
+
 .burger-menu {
   display: none;
 }
@@ -146,4 +150,16 @@ ol {
   .header > .container {
     padding: 0 20px;
   }
+}
+
+.burger-menu.active .burger-top {
+  transform: translateY(14px) rotate(45deg);
+}
+
+.burger-menu.active .burger-middle {
+  opacity: 0;
+}
+
+.burger-menu.active .burger-bottom {
+  transform: translateY(-14px) rotate(-45deg);
 }
