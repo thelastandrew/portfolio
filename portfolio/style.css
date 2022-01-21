@@ -228,6 +228,7 @@ ol {
   }
 
   .nav {
+    display: none;
     position: absolute;
     top: 0;
     right: -100%;
@@ -284,6 +285,7 @@ ol {
 }
 
 .nav.show {
+  display: block;
   right: 0;
 }
 
@@ -354,7 +356,8 @@ ol {
 
 /* SKILLS */
 
-.skills {
+.skills,
+.portfolio {
   padding-top: 100px;
 }
 
@@ -388,6 +391,13 @@ ol {
   line-height: 2em;
 }
 
+@media (max-width: 1342px) {
+  .skills-items {
+    justify-content: center;
+    align-content: space-between;
+  }
+}
+
 @media (max-width: 768px) {
   .skills .section-title {
     margin-bottom: 65px;
@@ -416,5 +426,56 @@ ol {
   .skills-items {
     flex-direction: column;
     align-content: center;
+  }
+}
+
+/* PORTFOLIO */
+
+.portfolio-btns {
+  margin: 0 auto 55px;
+  text-align: center;
+}
+
+.portfolio-btns .btn {
+  margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+  .portfolio-btns {
+    max-width: 445px;
+  }
+}
+
+.portfolio-items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.portfolio-item {
+  max-width: 450px;
+  transition: 0.3s;
+}
+
+.portfolio-item img {
+  width: 100%;
+}
+
+.portfolio-item:hover {
+  box-shadow: 0 0 20px var(--color-gold);
+}
+
+@media (max-width: 1456px) {
+  .portfolio-items {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-items {
+    flex-direction: column;
+    align-items: center;
   }
 }
