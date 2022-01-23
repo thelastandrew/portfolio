@@ -37,6 +37,10 @@ ol {
   list-style-type: none;
 }
 
+button {
+  cursor: pointer;
+}
+
 .container {
   max-width: 1440px;
   margin: 0 auto;
@@ -111,7 +115,6 @@ ol {
 @media (max-width: 768px) {
   .section-title {
     height: 2.5rem;
-    margin-bottom: 36px;
     background: linear-gradient(
       to top,
       var(--color-black) 19px,
@@ -156,7 +159,8 @@ ol {
   transition: 0.3s;
 }
 
-.header-logo:hover {
+.header-logo:hover,
+.play-btn:hover {
   filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
     contrast(87%);
 }
@@ -252,10 +256,15 @@ ol {
     padding-left: 127px;
   }
 
+  .switch-lng {
+    width: 5.125rem;
+  }
+
   .burger-menu {
     display: block;
     width: 50px;
     margin-left: 20px;
+    margin-right: 4px;
   }
 }
 
@@ -357,7 +366,8 @@ ol {
 /* SKILLS */
 
 .skills,
-.portfolio {
+.portfolio,
+.video {
   padding-top: 100px;
 }
 
@@ -404,7 +414,8 @@ ol {
   }
 
   .skills-items {
-    padding: 0 40px 40px;
+    justify-content: space-between;
+    padding: 0 40px 5px;
   }
 
   .skills-item {
@@ -460,6 +471,7 @@ ol {
 }
 
 .portfolio-item img {
+  display: block;
   width: 100%;
 }
 
@@ -474,8 +486,60 @@ ol {
 }
 
 @media (max-width: 768px) {
+  .portfolio .section-title,
+  .video .section-title,
+  .price .section-title {
+    margin-bottom: 70px;
+  }
   .portfolio-items {
     flex-direction: column;
     align-items: center;
+  }
+}
+
+/* VIDEO */
+
+.video-player {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-preview {
+  background: url(./assets/jpg/video-player.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 0;
+  padding-top: 50.358%;
+}
+
+.play-btn {
+  position: absolute;
+  width: 9.2858%;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  transition: 0.3s;
+}
+
+.play-btn img {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .video-player {
+    margin: 0 -20px;
+  }
+
+  .video-preview {
+    background: url(./assets/jpg/video-player-768.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 54.427%;
+  }
+
+  .play-btn {
+    width: 8.41145%;
   }
 }
