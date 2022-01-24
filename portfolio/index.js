@@ -5,14 +5,14 @@ const body = document.querySelector(".body");
 
 burgerMenu.addEventListener("click", function (e) {
   burgerMenu.classList.toggle("active");
-  body.classList.toggle("block");
+  body.classList.add("block");
   nav.classList.toggle("show");
 });
 
 navItems.forEach((element) => {
   element.addEventListener("click", function (e) {
     burgerMenu.classList.toggle("active");
-    body.classList.toggle("block");
+    body.classList.remove("block");
     nav.classList.toggle("show");
   });
 });
