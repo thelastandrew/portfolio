@@ -4,130 +4,151 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Portfolio</title>
-  <link rel="stylesheet" href="./style.css">
-  <link rel="icon" type="image/png" href="./assets/png/icon.png">
+  <!-- <link rel="stylesheet" href="normalize.css"> -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="icon.ico">
 </head>
 
-<body>
+<body class="body">
   <header class="header">
-    <div class="container header-container">
+    <div class="container">
       <div class="header-left">
-        <div class="logo">
-          <a class="home-link" href="#"></a>
-        </div>
+        <div class="header-logo"></div>
       </div>
       <div class="header-right">
         <nav class="nav">
           <ul class="nav-list">
-            <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
-            <li class="nav-item"><a href="#portfolio" class="nav-link">Portfolio</a></li>
-            <li class="nav-item"><a href="#video" class="nav-link">Video</a></li>
-            <li class="nav-item"><a href="#price" class="nav-link">Price</a></li>
-            <li class="nav-item"><a href="#contacts" class="nav-link">Contacts</a></li>
+            <li class="nav-item">
+              <a href="#skills" class="nav-link">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a href="#portfolio" class="nav-link">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a href="#video" class="nav-link">Video</a>
+            </li>
+            <li class="nav-item">
+              <a href="#price" class="nav-link">Price</a>
+            </li>
+            <li class="nav-item">
+              <a href="#contacts" class="nav-link">Contacts</a>
+            </li>
           </ul>
         </nav>
         <div class="switch-lng">
-          <p><a class="lang selected" href="#" id="en">en</a></p>
-          <p>/</p>
-          <p><a class="lang unselected" href="#" id="ru">ru</a></p>
+          <p class="lang-en active">en</p>
+          <p class="lnag-slash">/</p>
+          <p class="lang-ru">ru</p>
+        </div>
+        <div class="burger-menu">
+          <div class="burger-line burger-top"></div>
+          <div class="burger-line burger-middle"></div>
+          <div class="burger-line burger-bottom"></div>
         </div>
       </div>
     </div>
   </header>
   <main class="main">
-    <div class="container hero-container">
-      <section class="hero">
-        <div class="hero-text-block">
+    <section class="hero">
+      <div class="container">
+        <div class="hero-info">
           <h1 class="hero-title">Alexa Rise</h1>
-          <p class="hero-text">Save sincere emotions, romantic feelings and <br> happy moments of life together with
+          <p class="hero-text">Save sincere emotions, romantic feelings and happy moments of life together with
             professional photographer Alexa Rise</p>
-          <!-- допилить функционал кнопки -->
-          <button class="btn-gld btn">Hire me</button>
+          <button class="btn gold-btn">Hire me</button>
         </div>
-      </section>
-      <section class="skills" id="skills">
+      </div>
+    </section>
+    <section class="skills" id="skills">
+      <div class="container">
         <div class="section-title">
           <h2 class="section-name">Skills</h2>
         </div>
         <div class="skills-items">
           <div class="skills-item">
-            <div class="skills-pic">
+            <div class="skills-image">
               <img src="./assets/svg/camera.svg" alt="camera">
             </div>
             <h3 class="skills-title">Digital photography</h3>
-            <p class="skills-description">High-quality photos in the studio and on the nature</p>
+            <div class="skills-description">High-quality photos in the studio and on the nature</div>
           </div>
           <div class="skills-item">
-            <div class="skills-pic">
+            <div class="skills-image">
               <img src="./assets/svg/video.svg" alt="video">
             </div>
             <h3 class="skills-title">Video shooting</h3>
-            <p class="skills-description">Capture your moments so that they always stay with you</p>
+            <div class="skills-description">Capture your moments so that they always stay with you</div>
           </div>
           <div class="skills-item">
-            <div class="skills-pic">
+            <div class="skills-image">
               <img src="./assets/svg/image.svg" alt="image">
             </div>
             <h3 class="skills-title">Retouch</h3>
-            <p class="skills-description">I strive to make photography surpass reality</p>
+            <div class="skills-description">I strive to make photography surpass reality</div>
           </div>
           <div class="skills-item">
-            <div class="skills-pic">
-              <img src="./assets/svg/mic.svg" alt="microphone">
+            <div class="skills-image">
+              <img src="./assets/svg/mic.svg" alt="mic">
             </div>
             <h3 class="skills-title">Audio</h3>
-            <p class="skills-description">Professional sounds recording for video, advertising, portfolio</p>
+            <div class="skills-description">Professional sounds recording for video, advertising, portfolio</div>
           </div>
         </div>
-      </section>
-      <section class="portfolio" id="portfolio">
+      </div>
+    </section>
+    <section class="portfolio" id="portfolio">
+      <div class="container">
         <div class="section-title">
           <h2 class="section-name">Portfolio</h2>
         </div>
-        <!-- допилить функционал кнопок -->
         <div class="portfolio-btns">
-          <button class="btn-black btn">Winter</button>
-          <button class="btn-black btn">Spring</button>
-          <button class="btn-black btn">Summer</button>
-          <button class="btn-gld btn">Autumn</button>
+          <button class="btn black-btn">Winter</button>
+          <button class="btn black-btn">Spring</button>
+          <button class="btn black-btn">Summer</button>
+          <button class="btn gold-btn">Autumn</button>
         </div>
         <div class="portfolio-items">
           <div class="portfolio-item">
-            <img src="./assets/jpg/portfolio-img1.jpg" alt="image 1">
+            <img src="./assets/jpg/portfolio-img1.jpg" alt="img1">
           </div>
           <div class="portfolio-item">
-            <img src="./assets/jpg/portfolio-img2.jpg" alt="image 2">
+            <img src="./assets/jpg/portfolio-img2.jpg" alt="img2">
           </div>
           <div class="portfolio-item">
-            <img src="./assets/jpg/portfolio-img3.jpg" alt="image 3">
+            <img src="./assets/jpg/portfolio-img3.jpg" alt="img3">
           </div>
           <div class="portfolio-item">
-            <img src="./assets/jpg/portfolio-img4.jpg" alt="image 4">
+            <img src="./assets/jpg/portfolio-img4.jpg" alt="img4">
           </div>
           <div class="portfolio-item">
-            <img src="./assets/jpg/portfolio-img5.jpg" alt="image 5">
+            <img src="./assets/jpg/portfolio-img5.jpg" alt="img5">
           </div>
           <div class="portfolio-item">
-            <img src="./assets/jpg/portfolio-img6.jpg" alt="image 6">
+            <img src="./assets/jpg/portfolio-img6.jpg" alt="img6">
           </div>
         </div>
-      </section>
-      <section class="video" id="video">
+      </div>
+    </section>
+    <section class="video" id="video">
+      <div class="container">
         <div class="section-title">
           <h2 class="section-name">Video</h2>
         </div>
         <div class="video-player">
-          <img src="./assets/jpg/video-player.jpg" alt="video preview">
-          <button class="play-btn"></button>
+          <div class="video-preview"></div>
+          <button class="play-btn">
+            <img src="./assets/svg/Play_hover.svg" alt="Play_hover">
+          </button>
         </div>
-      </section>
-      <section class="price" id="price">
+      </div>
+    </section>
+    <section class="price" id="price">
+      <div class="container">
         <div class="section-title">
           <h2 class="section-name">Price</h2>
         </div>
-        <!-- допилить функционал кнопок -->
         <div class="price-items">
           <div class="price-item">
             <h3 class="price-title">Standard</h3>
@@ -139,7 +160,7 @@
               Readiness 2-3 weeks<br>
               Make up, visage
             </p>
-            <button class="btn-gld btn">Order shooting</button>
+            <button class="btn gold-btn">Order shooting</button>
           </div>
           <div class="price-item">
             <h3 class="price-title">Premium</h3>
@@ -151,7 +172,7 @@
               Readiness 1-2 weeks<br>
               Make up, visage
             </p>
-            <button class="btn-gld btn">Order shooting</button>
+            <button class="btn gold-btn">Order shooting</button>
           </div>
           <div class="price-item">
             <h3 class="price-title">Gold</h3>
@@ -163,22 +184,24 @@
               Readiness 1 week<br>
               Make up, visage, hairstyle
             </p>
-            <button class="btn-gld btn">Order shooting</button>
+            <button class="btn gold-btn">Order shooting</button>
           </div>
         </div>
-      </section>
-      <section class="contacts" id="contacts">
-        <div class="contacts-container">
+      </div>
+    </section>
+    <section class="contacts" id="contacts">
+      <div class="container">
+        <div class="contacts-form-section">
           <h2 class="contacts-title">Contact me</h2>
           <form action="#" class="contacts-form">
             <input type="email" placeholder="E-mail" required><br>
             <input type="tel" placeholder="Phone" required><br>
             <textarea placeholder="Message"></textarea>
-            <button type="submit" class="btn-gld btn">Send message</button>
+            <button type="submit" class="btn gold-btn">Send message</button>
           </form>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   </main>
   <footer class="footer">
     <div class="container">
@@ -200,6 +223,8 @@
       </div>
     </div>
   </footer>
+  <script src="index.js">
+  </script>
 </body>
 
 </html>
