@@ -363,6 +363,27 @@ button {
   }
 }
 
+@media (max-width: 426px) {
+  .header .container {
+    background-position: -200px -30px;
+  }
+
+  .hero .container {
+    padding: 40px 20px 60px;
+    background-position: -200px -120px;
+    text-align: center;
+  }
+
+  .hero-info {
+    margin: 0 auto;
+    max-width: 260px;
+  }
+
+  .hero-text {
+    margin-bottom: 30px;
+  }
+}
+
 /* SKILLS */
 
 .skills,
