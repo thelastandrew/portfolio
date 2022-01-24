@@ -592,6 +592,10 @@ button {
 }
 
 @media (max-width: 768px) {
+  .price-items {
+    margin-bottom: 80px;
+  }
+
   .price-item {
     width: 420px;
   }
@@ -605,5 +609,86 @@ button {
 
   .price-item {
     padding: 20px 0;
+  }
+}
+
+/* CONTACTS */
+
+.contacts .container {
+  padding-top: 60px;
+  height: 700px;
+  background: url(./assets/jpg/contacts-bg.jpg);
+  background-size: auto 700px;
+  background-position: center center;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.contacts-form-section {
+  width: 450px;
+}
+
+.contacts-title {
+  color: var(--color-gold);
+  font-family: "Merriweather", serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 2em;
+  margin-bottom: 40px;
+}
+
+input,
+textarea {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  border: 2px solid var(--color-gold);
+  color: var(--color-gold);
+  font-family: "Inter", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 2em;
+  padding-top: 3px;
+  padding-left: 18px;
+  padding-bottom: 3px;
+  margin-bottom: 20px;
+}
+
+textarea {
+  height: 100px;
+  resize: none;
+  margin-bottom: 27px;
+}
+
+::placeholder {
+  color: var(--color-gld);
+}
+
+@media (max-width: 1024px) {
+  .contacts .container {
+    background-position-x: -100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contacts .container {
+    height: 600px;
+    background: url(./assets/jpg/contacts-768.jpg);
+    background-size: auto 600px;
+    justify-content: center;
+  }
+
+  .contacts-form-section {
+    text-align: center;
+  }
+
+  .contacts-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .contacts .container {
+    height: 520px;
+    padding-top: 40px;
   }
 }
