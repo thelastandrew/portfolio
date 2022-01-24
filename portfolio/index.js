@@ -5,7 +5,7 @@ const body = document.querySelector(".body");
 
 burgerMenu.addEventListener("click", function (e) {
   burgerMenu.classList.toggle("active");
-  body.classList.add("block");
+  body.classList.toggle("block");
   nav.classList.toggle("show");
 });
 
