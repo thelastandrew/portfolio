@@ -1,3 +1,5 @@
+import i18Obj from "./translate.js";
+
 // BURGER MENU
 const burgerMenu = document.querySelector(".burger-menu");
 const nav = document.querySelector(".nav");
@@ -19,7 +21,6 @@ navItems.forEach((element) => {
 });
 
 // PORTFOLIO IMAGES
-
 const portfolioBtn = document.querySelectorAll(".portfolio-btn");
 let activeBtn = document.querySelector(".active-btn");
 const portfolioImg = document.querySelectorAll(".portfolio-img");
