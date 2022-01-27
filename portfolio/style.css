@@ -63,28 +63,26 @@ button {
   line-height: 2em;
   border: none;
   transition: 0.3s;
+  border: 2px solid var(--color-gold);
+  background: var(--color-black);
+  color: var(--color-gold);
+}
+
+.btn:hover {
+  color: var(--color-white);
 }
 
 .btn:active {
   border: outset;
 }
 
-.gold-btn {
+.gold-btn,
+.active-btn {
   color: var(--color-black);
   background: var(--color-gold);
 }
 
 .gold-btn:hover {
-  color: var(--color-white);
-}
-
-.black-btn {
-  border: 2px solid var(--color-gold);
-  background: var(--color-black);
-  color: var(--color-gold);
-}
-
-.black-btn:hover {
   color: var(--color-white);
 }
 

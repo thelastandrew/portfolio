@@ -1,3 +1,4 @@
+// BURGER MENU
 const burgerMenu = document.querySelector(".burger-menu");
 const nav = document.querySelector(".nav");
 const navItems = document.querySelectorAll(".nav-item");
@@ -14,5 +15,21 @@ navItems.forEach((element) => {
     burgerMenu.classList.toggle("active");
     body.classList.remove("block");
     nav.classList.toggle("show");
+  });
+});
+
+// PORTFOLIO IMAGES
+
+const portfolioBtn = document.querySelectorAll(".portfolio-btn");
+let activeBtn = document.querySelector(".active-btn");
+const portfolioImg = document.querySelectorAll(".portfolio-img");
+
+portfolioBtn.forEach((element) => {
+  element.addEventListener("click", function (e) {
+    if (!element.classList.contains("active-btn")) {
+      activeBtn.classList.remove("active-btn");
+      element.classList.add("active-btn");
+      activeBtn = element;
+    }
   });
 });
