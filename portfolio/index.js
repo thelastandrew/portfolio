@@ -23,13 +23,30 @@ navItems.forEach((element) => {
 const portfolioBtn = document.querySelectorAll(".portfolio-btn");
 let activeBtn = document.querySelector(".active-btn");
 const portfolioImg = document.querySelectorAll(".portfolio-img");
+const seasons = ["winter", "spring", "summer", "autumn"];
 
-portfolioBtn.forEach((element) => {
-  element.addEventListener("click", function (e) {
-    if (!element.classList.contains("active-btn")) {
+function preloadImages() {
+  seasons.forEach((element) => {
+    for (let i = 1; i <= 6; i++) {
+      const img = new Image();
+      img.src = `./assets/jpg/${element}/${i}.jpg`;
+    }
+  });
+}
+
+preloadImages();
+
+portfolioBtn.forEach((btnElement) => {
+  btnElement.addEventListener("click", function (e) {
+    if (!btnElement.classList.contains("active-btn")) {
       activeBtn.classList.remove("active-btn");
-      element.classList.add("active-btn");
-      activeBtn = element;
+      btnElement.classList.add("active-btn");
+      activeBtn = btnElement;
+      portfolioImg.forEach((imgElement, index) => {
+        imgElement.src = `./assets/jpg/${btnElement.dataset.season}/${
+          index + 1
+        }.jpg`;
+      });
     }
   });
 });
