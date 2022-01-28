@@ -249,7 +249,7 @@ button {
   transition: 0.3s;
 }
 
- .switch-theme {
+ .light .switch-theme {
   background-image: url('./assets/svg/sun.svg');
 }
 

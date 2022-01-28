@@ -88,19 +88,32 @@ switchTheme.addEventListener('click', function(e) {
 })
 
 //LOCAL STORAGE
-let boolTheme = body.classList.contains('light'); //boolean
-let theme = String(boolTheme); //string
-
 function setLocalStorage() {
   localStorage.setItem("lang", currentLang);
-  localStorage.setItem("theme", theme);
+  localStorage.setItem("theme", String(body.classList.contains("light")));
 }
 
 function getLocalStorage() {
-  if (localStorage.getItem('lang')) {
-    const language = localStorage.getItem('lang');
+  if (localStorage.getItem("lang")) {
+    const language = localStorage.getItem("lang");
     getTranslate(language);
-    
+    lang.forEach((element) => {
+      if (!element.textContent === language) {
+      //   element.classList.remove("selected");
+      // } else {
+      //   element.classList.add("selected");
+      selectedLang.classList.remove("selected");
+      element.classList.add("selected");
+      selectedLang = element;
+      }
+    })
+  }
+
+  if(localStorage.getItem("theme")) {
+    const theme = localStorage.getItem("theme");
+    if (theme === "true") {
+      body.classList.add("light");
+    }
   }
 }
 
