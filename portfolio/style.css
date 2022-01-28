@@ -189,21 +189,19 @@ button {
   justify-content: space-between;
 }
 
-.switch-lng > .active {
+.switch-lng > .selected {
   color: var(--color-gold);
 }
 
 .nav-link,
-.lang-en,
-.lang-ru,
+.lang,
 .burger-menu {
   cursor: pointer;
   transition: 0.3s;
 }
 
 .nav-link:hover,
-.lang-en:hover,
-.lang-ru:hover {
+.lang:hover {
   color: var(--color-gold);
 }
 

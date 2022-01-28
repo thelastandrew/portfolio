@@ -51,3 +51,18 @@ portfolioBtn.forEach((btnElement) => {
     }
   });
 });
+
+//LANGUAGE SELECTION
+
+const lang = document.querySelectorAll(".lang");
+let selectedLang = document.querySelector(".selected");
+
+lang.forEach((element) => {
+  element.addEventListener("click", function (e) {
+    if (!element.classList.contains("selected")) {
+      selectedLang.classList.remove("selected");
+      element.classList.add("selected");
+      selectedLang = element;
+    }
+  });
+});
