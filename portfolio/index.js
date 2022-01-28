@@ -84,6 +84,25 @@ lang.forEach((element) => {
 const switchTheme = document.querySelector(".switch-theme");
 
 switchTheme.addEventListener('click', function(e) {
-  switchTheme.classList.toggle('light');
   body.classList.toggle('light');
 })
+
+//LOCAL STORAGE
+let boolTheme = body.classList.contains('light'); //boolean
+let theme = String(boolTheme); //string
+
+function setLocalStorage() {
+  localStorage.setItem("lang", currentLang);
+  localStorage.setItem("theme", theme);
+}
+
+function getLocalStorage() {
+  if (localStorage.getItem('lang')) {
+    const language = localStorage.getItem('lang');
+    getTranslate(language);
+    
+  }
+}
+
+window.addEventListener('beforeunload', setLocalStorage);
+window.addEventListener('load', getLocalStorage);

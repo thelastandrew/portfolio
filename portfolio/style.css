@@ -26,7 +26,6 @@ body {
   font-family: "Inter", sans-serif;
   font-weight: 400;
   overflow-x: hidden;
-  transition: 0.3s;
 }
 
 .body.light {
@@ -250,7 +249,7 @@ button {
   transition: 0.3s;
 }
 
-.switch-theme.light {
+ .switch-theme {
   background-image: url('./assets/svg/sun.svg');
 }
 
@@ -342,11 +341,23 @@ button {
   .header .container {
     padding: 0 20px;
   }
+  
+  .burger-menu,
+  .switch-theme {
+    margin-left: 15px;
+  }
+
   .nav-list {
     font-size: 1.9rem;
     padding-top: 90px;
     padding-left: 0;
     align-items: center;
+  }
+}
+
+@media (max-width: 375px) {
+  .switch-lng {
+    width: 4.5rem;
   }
 }
 
