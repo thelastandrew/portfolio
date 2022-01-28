@@ -53,7 +53,6 @@ portfolioBtn.forEach((btnElement) => {
 });
 
 //LANGUAGE SELECTION
-
 const lang = document.querySelectorAll(".lang");
 let selectedLang = document.querySelector(".selected");
 const textForTranslate = document.querySelectorAll("[data-i18]");
@@ -80,3 +79,11 @@ lang.forEach((element) => {
     }
   });
 });
+
+//THEME SWITCHER
+const switchTheme = document.querySelector(".switch-theme");
+
+switchTheme.addEventListener('click', function(e) {
+  switchTheme.classList.toggle('light');
+  body.classList.toggle('light');
+})

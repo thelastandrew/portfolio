@@ -26,6 +26,11 @@ body {
   font-family: "Inter", sans-serif;
   font-weight: 400;
   overflow-x: hidden;
+  transition: 0.3s;
+}
+
+.body.light {
+  background-color: var(--color-white);
 }
 
 .block {
@@ -68,6 +73,11 @@ button {
   color: var(--color-gold);
 }
 
+.light .btn:not(.gold-btn, .active-btn) {
+  background: var(--color-white);
+  color: var(--color-black);
+}
+
 .btn:hover {
   color: var(--color-white);
 }
@@ -80,6 +90,11 @@ button {
 .active-btn {
   color: var(--color-black);
   background: var(--color-gold);
+}
+
+.light .btn:hover {
+  background: var(--color-gold);
+  color: var(--color-white);
 }
 
 .gold-btn:hover {
@@ -103,6 +118,16 @@ button {
   justify-content: center;
 }
 
+.light .section-title {
+  background: linear-gradient(
+    to top,
+    var(--color-white) 39px,
+    var(--color-black) 39px,
+    var(--color-black) 41px,
+    var(--color-white) 41px
+  );
+}
+
 .section-name {
   display: inline-block;
   font-family: "Merriweather", serif;
@@ -113,6 +138,11 @@ button {
   background: var(--color-black);
   padding: 0 20px;
   margin: 0 auto;
+}
+
+.light .section-name {
+  color: var(--color-black);
+  background: var(--color-white);
 }
 
 @media (max-width: 768px) {
@@ -126,10 +156,26 @@ button {
       var(--color-black) 21px
     );
   }
+
+  .light .section-title {
+    background: linear-gradient(
+      to top,
+      var(--color-white) 19px,
+      var(--color-black) 19px,
+      var(--color-black) 21px,
+      var(--color-white) 21px
+    );
+  }
+
   .section-name {
     font-size: 2rem;
     line-height: 1.25em;
   }
+}
+
+.light .skills,
+.light .price {
+  color: var(--color-black);
 }
 
 /* HEADER */
@@ -204,6 +250,10 @@ button {
   transition: 0.3s;
 }
 
+.switch-theme.light {
+  background-image: url('./assets/svg/sun.svg');
+}
+
 .nav-link,
 .lang,
 .burger-menu {
@@ -230,6 +280,10 @@ button {
   transition: 0.3s;
 }
 
+.light .active .burger-line {
+  background: var(--color-black);
+}
+
 .burger-menu:hover .burger-line {
   background: var(--color-gold);
 }
@@ -249,7 +303,7 @@ button {
     right: -200vw;
     width: 100vw;
     background: rgba(0, 0, 0, 0.5);
-    transition: 0.5s;
+    transition: 0.3s;
   }
 
   .nav-list {
@@ -265,6 +319,11 @@ button {
     height: 100vh;
     padding-top: 134px;
     padding-left: 127px;
+  }
+
+  .light .nav-list {
+    background: var(--color-white);
+    color: var(--color-black);
   }
 
   .switch-lng {
@@ -285,7 +344,6 @@ button {
   }
   .nav-list {
     font-size: 1.9rem;
-
     padding-top: 90px;
     padding-left: 0;
     align-items: center;
@@ -729,10 +787,12 @@ textarea {
 
 .footer .container {
   height: 150px;
-  font-family: "Inter", sans-serif;
   font-size: 20px;
-  font-weight: 400;
   line-height: 50px;
+}
+
+.light .footer .container {
+  background: var(--color-black);
   color: var(--color-white);
 }
 
