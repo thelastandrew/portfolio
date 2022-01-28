@@ -56,6 +56,19 @@ portfolioBtn.forEach((btnElement) => {
 
 const lang = document.querySelectorAll(".lang");
 let selectedLang = document.querySelector(".selected");
+const textForTranslate = document.querySelectorAll("[data-i18]");
+let currentLang = "en";
+
+function getTranslate(lg) {
+  textForTranslate.forEach((element) => {
+    element.textContent = i18Obj[lg][element.dataset.i18];
+    if (element.placeholder) {
+      element.placeholder = i18Obj[lg][element.dataset.i18];
+      element.textContent = "";
+    }
+    currentLang = lg;
+  });
+}
 
 lang.forEach((element) => {
   element.addEventListener("click", function (e) {
@@ -63,6 +76,7 @@ lang.forEach((element) => {
       selectedLang.classList.remove("selected");
       element.classList.add("selected");
       selectedLang = element;
+      getTranslate(e.target.id);
     }
   });
 });
