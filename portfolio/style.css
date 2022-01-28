@@ -163,6 +163,7 @@ button {
 }
 
 .header-logo:hover,
+.switch-theme:hover,
 .play-btn:hover,
 .social-link:hover {
   filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
@@ -191,6 +192,16 @@ button {
 
 .switch-lng > .selected {
   color: var(--color-gold);
+}
+
+.switch-theme {
+  width: 45px;
+  height: 45px;
+  margin-left: 30px;
+  background-image: url('./assets/svg/moon.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: 0.3s;
 }
 
 .nav-link,
