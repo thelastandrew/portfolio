@@ -69,23 +69,27 @@ function getTranslate(lg) {
   });
 }
 
+function changeLangColor(el) {
+  if (!el.classList.contains("selected")) {
+    selectedLang.classList.remove("selected");
+    el.classList.add("selected");
+    selectedLang = el;
+  }
+}
+
 lang.forEach((element) => {
   element.addEventListener("click", function (e) {
-    if (!element.classList.contains("selected")) {
-      selectedLang.classList.remove("selected");
-      element.classList.add("selected");
-      selectedLang = element;
-      getTranslate(e.target.id);
-    }
+    getTranslate(e.target.id);
+    changeLangColor(element);
   });
 });
 
 //THEME SWITCHER
 const switchTheme = document.querySelector(".switch-theme");
 
-switchTheme.addEventListener('click', function(e) {
-  body.classList.toggle('light');
-})
+switchTheme.addEventListener("click", function (e) {
+  body.classList.toggle("light");
+});
 
 //LOCAL STORAGE
 function setLocalStorage() {
@@ -96,20 +100,12 @@ function setLocalStorage() {
 function getLocalStorage() {
   if (localStorage.getItem("lang")) {
     const language = localStorage.getItem("lang");
+    const storedLang = document.getElementById(language);
     getTranslate(language);
-    lang.forEach((element) => {
-      if (!element.textContent === language) {
-      //   element.classList.remove("selected");
-      // } else {
-      //   element.classList.add("selected");
-      selectedLang.classList.remove("selected");
-      element.classList.add("selected");
-      selectedLang = element;
-      }
-    })
+    changeLangColor(storedLang);
   }
 
-  if(localStorage.getItem("theme")) {
+  if (localStorage.getItem("theme")) {
     const theme = localStorage.getItem("theme");
     if (theme === "true") {
       body.classList.add("light");
@@ -117,5 +113,5 @@ function getLocalStorage() {
   }
 }
 
-window.addEventListener('beforeunload', setLocalStorage);
-window.addEventListener('load', getLocalStorage);
+window.addEventListener("beforeunload", setLocalStorage);
+window.addEventListener("load", getLocalStorage);
