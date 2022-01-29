@@ -72,6 +72,10 @@ button {
   color: var(--color-gold);
 }
 
+.btn:active {
+  transform: translateY(3px);
+}
+
 .light .btn:not(.gold-btn, .active-btn) {
   background: var(--color-white);
   color: var(--color-black);
@@ -243,14 +247,14 @@ button {
   width: 45px;
   height: 45px;
   margin-left: 30px;
-  background-image: url('./assets/svg/moon.svg');
+  background-image: url("./assets/svg/moon.svg");
   background-size: contain;
   background-repeat: no-repeat;
   transition: 0.3s;
 }
 
- .light .switch-theme {
-  background-image: url('./assets/svg/sun.svg');
+.light .switch-theme {
+  background-image: url("./assets/svg/sun.svg");
 }
 
 .nav-link,
@@ -341,7 +345,7 @@ button {
   .header .container {
     padding: 0 20px;
   }
-  
+
   .burger-menu,
   .switch-theme {
     margin-left: 15px;
