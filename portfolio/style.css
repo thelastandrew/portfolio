@@ -28,6 +28,10 @@ body {
   overflow-x: hidden;
 }
 
+.body.light {
+  background-color: var(--color-white);
+}
+
 .block {
   overflow: hidden;
 }
@@ -63,28 +67,40 @@ button {
   line-height: 2em;
   border: none;
   transition: 0.3s;
+  border: 2px solid var(--color-gold);
+  background: var(--color-black);
+  color: var(--color-gold);
+}
+
+.btn:active {
+  transform: translateY(3px);
+}
+
+.light .btn:not(.gold-btn, .active-btn) {
+  background: var(--color-white);
+  color: var(--color-black);
+}
+
+.btn:hover {
+  color: var(--color-white);
 }
 
 .btn:active {
   border: outset;
 }
 
-.gold-btn {
+.gold-btn,
+.active-btn {
   color: var(--color-black);
   background: var(--color-gold);
 }
 
-.gold-btn:hover {
+.light .btn:hover {
+  background: var(--color-gold);
   color: var(--color-white);
 }
 
-.black-btn {
-  border: 2px solid var(--color-gold);
-  background: var(--color-black);
-  color: var(--color-gold);
-}
-
-.black-btn:hover {
+.gold-btn:hover {
   color: var(--color-white);
 }
 
@@ -105,6 +121,16 @@ button {
   justify-content: center;
 }
 
+.light .section-title {
+  background: linear-gradient(
+    to top,
+    var(--color-white) 39px,
+    var(--color-black) 39px,
+    var(--color-black) 41px,
+    var(--color-white) 41px
+  );
+}
+
 .section-name {
   display: inline-block;
   font-family: "Merriweather", serif;
@@ -115,6 +141,11 @@ button {
   background: var(--color-black);
   padding: 0 20px;
   margin: 0 auto;
+}
+
+.light .section-name {
+  color: var(--color-black);
+  background: var(--color-white);
 }
 
 @media (max-width: 768px) {
@@ -128,10 +159,26 @@ button {
       var(--color-black) 21px
     );
   }
+
+  .light .section-title {
+    background: linear-gradient(
+      to top,
+      var(--color-white) 19px,
+      var(--color-black) 19px,
+      var(--color-black) 21px,
+      var(--color-white) 21px
+    );
+  }
+
   .section-name {
     font-size: 2rem;
     line-height: 1.25em;
   }
+}
+
+.light .skills,
+.light .price {
+  color: var(--color-black);
 }
 
 /* HEADER */
@@ -165,6 +212,7 @@ button {
 }
 
 .header-logo:hover,
+.switch-theme:hover,
 .play-btn:hover,
 .social-link:hover {
   filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
@@ -191,21 +239,33 @@ button {
   justify-content: space-between;
 }
 
-.switch-lng > .active {
+.switch-lng > .selected {
   color: var(--color-gold);
 }
 
+.switch-theme {
+  width: 45px;
+  height: 45px;
+  margin-left: 30px;
+  background-image: url("./assets/svg/moon.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: 0.3s;
+}
+
+.light .switch-theme {
+  background-image: url("./assets/svg/sun.svg");
+}
+
 .nav-link,
-.lang-en,
-.lang-ru,
+.lang,
 .burger-menu {
   cursor: pointer;
   transition: 0.3s;
 }
 
 .nav-link:hover,
-.lang-en:hover,
-.lang-ru:hover {
+.lang:hover {
   color: var(--color-gold);
 }
 
@@ -221,6 +281,10 @@ button {
   margin: 11px 0;
   background: var(--color-white);
   transition: 0.3s;
+}
+
+.light .active .burger-line {
+  background: var(--color-black);
 }
 
 .burger-menu:hover .burger-line {
@@ -242,7 +306,7 @@ button {
     right: -200vw;
     width: 100vw;
     background: rgba(0, 0, 0, 0.5);
-    transition: 0.5s;
+    transition: 0.3s;
   }
 
   .nav-list {
@@ -258,6 +322,11 @@ button {
     height: 100vh;
     padding-top: 134px;
     padding-left: 127px;
+  }
+
+  .light .nav-list {
+    background: var(--color-white);
+    color: var(--color-black);
   }
 
   .switch-lng {
@@ -276,12 +345,23 @@ button {
   .header .container {
     padding: 0 20px;
   }
+
+  .burger-menu,
+  .switch-theme {
+    margin-left: 15px;
+  }
+
   .nav-list {
     font-size: 1.9rem;
-
     padding-top: 90px;
     padding-left: 0;
     align-items: center;
+  }
+}
+
+@media (max-width: 375px) {
+  .switch-lng {
+    width: 4.5rem;
   }
 }
 
@@ -722,10 +802,12 @@ textarea {
 
 .footer .container {
   height: 150px;
-  font-family: "Inter", sans-serif;
   font-size: 20px;
-  font-weight: 400;
   line-height: 50px;
+}
+
+.light .footer .container {
+  background: var(--color-black);
   color: var(--color-white);
 }
 
